@@ -7,19 +7,14 @@ import org.openqa.selenium.support.PageFactory;
 import util.ProjectConstants;
 
 public class LoginPage {
-
     @FindBy(xpath = ProjectConstants.LOGIN_WINDOW)
     public WebElement loginWindow;
-
     @FindBy(xpath = ProjectConstants.NAME_TEXT_BOX_ON_LOGIN_WINDOW)
     public WebElement nameTextBoxOnLoginWindow;
-
     @FindBy(xpath = ProjectConstants.SUBMIT_FOR_EMAIL_OR_MOBILE_TEXT)
     public WebElement submitForEmailOrMobileText;
-
     @FindBy(xpath = ProjectConstants.PASSWORD_TEXT_BOX_ON_LOGIN_WINDOW)
     public WebElement passwordTextBoxOnLoginWindow;
-
     @FindBy(xpath = ProjectConstants.SIGNIN_BUTTON)
     public WebElement siginButton;
 

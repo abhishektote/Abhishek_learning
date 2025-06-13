@@ -7,7 +7,6 @@ import org.openqa.selenium.support.PageFactory;
 import util.ProjectConstants;
 
 public class OrderPage {
-
     @FindBy(xpath = ProjectConstants.DATE_DROP_DOWN_ORDER_PAGE)
     private WebElement dateDropDownOrderPage;
 

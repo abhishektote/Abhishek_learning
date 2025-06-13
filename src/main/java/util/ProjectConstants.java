@@ -48,14 +48,14 @@ public class ProjectConstants {
     public static final String RESPONSE_MOBILE_NO = "//div[@id='ya-myab-display-address-block-1']//span[@id='address-ui-widgets-PhoneNumber']";
     public static final String AMAZON_HOME = "//a[@id='nav-logo-sprites']";
 
-    public static final String USERNAME = "abhishektote00123@gmail.com";
-    public static final String PASSWORD = "rotation360@";
+    public static final String USERNAME = "";
+    public static final String PASSWORD = "";
     public static final String NAME = "abhishek tote";
     public static final String PINCODE = "411027";
     public static final String MOBILE = "7057677153";
     public static final String HOUSE_NO = "A2/23";
     public static final String STREET_NO = "Ganesh nagar, Pimple New Sangvi";
-    public static final String UPI_ID = "9960486647@apl";
+    public static final String UPI_ID = "";
 
 
 }

@@ -7,16 +7,12 @@ import org.openqa.selenium.support.PageFactory;
 import util.ProjectConstants;
 
 public class CommonActions {
-
     @FindBy(xpath = ProjectConstants.BUY_NOW_BUTTON)
     private WebElement buyNowButton;
-
     @FindBy(xpath = ProjectConstants.ADD_TO_CART)
     private WebElement addToCart;
-
     @FindBy(xpath = ProjectConstants.GO_TO_CART)
     private WebElement goToCart;
-
     @FindBy(xpath = ProjectConstants.GET_CART_QUANTITY)
     private WebElement getCartQuantity;
 

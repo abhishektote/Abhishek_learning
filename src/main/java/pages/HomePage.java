@@ -7,7 +7,6 @@ import org.openqa.selenium.support.PageFactory;
 import util.ProjectConstants;
 
 public class HomePage {
-
     public WebDriver driver;
 
     @FindBy(xpath = ProjectConstants.AMAZON_HOME)

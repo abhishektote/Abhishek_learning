@@ -12,7 +12,7 @@ import tests.testComponents.BaseTest;
 import util.ErrorMessageConstants;
 import util.ProjectConstants;
 
-public class WithoutLogin extends BaseTest{
+public class WithoutLogin extends BaseTest {
     private HomePage homePage;
     private ProductPage productPage;
     private NavigationBar navigationBar;
@@ -37,7 +37,7 @@ public class WithoutLogin extends BaseTest{
     }
 
     @Test(priority = 2)
-    public void getThirdDealFromTodaysDeal(){
+    public void getThirdDealFromTodaysDeal() {
         try {
             productPage.selectDealItem();
             System.out.println("Third deal item selected successfully.");
@@ -47,24 +47,21 @@ public class WithoutLogin extends BaseTest{
     }
 
     @Test(priority = 3)
-    public void addMinQuantityToCartAndVerify(){
+    public void addMinQuantityToCartAndVerify() {
         try {
             commonActions.addToCart();
             commonActions.goToCart();
-
             String actualQuantity = commonActions.getCartQuantity();
             System.out.println("Cart Quantity: " + actualQuantity);
-
             Assert.assertEquals(actualQuantity, ProjectConstants.MINIMUM_CART_VALUE,
                     String.format(ErrorMessageConstants.CART_QUANTITY_NOT_MATCH, actualQuantity));
-
         } catch (Exception e) {
             throw new RuntimeException("Failed to add and verify minimum quantity in cart: " + e.getMessage());
         }
     }
 
     @Test(priority = 4)
-    public void searchMobilesOnSearchBox(){
+    public void searchMobilesOnSearchBox() {
         try {
             productPage.searchMobiles();
             System.out.println("Mobile search executed successfully.");
@@ -74,7 +71,7 @@ public class WithoutLogin extends BaseTest{
     }
 
     @Test(priority = 5)
-    public void scrollToResultListAndFetchLastDisplayedProduct(){
+    public void scrollToResultListAndFetchLastDisplayedProduct() {
         try {
             WebElement details = productPage.scrollAndGetDetailsOfLastItem(driver);
             Assert.assertNotNull(details, ErrorMessageConstants.LAST_DISPLAYED_ITEM_NOT_FOUND);
@@ -85,7 +82,7 @@ public class WithoutLogin extends BaseTest{
     }
 
     @Test(priority = 6)
-    public void navigateToMobileFromNavigationBarAndBackToMainMenu(){
+    public void navigateToMobileFromNavigationBarAndBackToMainMenu() {
         try {
             navigationBar.navigateToMobileThroughNavigationBar();
             homePage.returnToHomePage();

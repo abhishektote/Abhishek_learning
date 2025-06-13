@@ -9,66 +9,51 @@ import util.ErrorMessageConstants;
 import util.ProjectConstants;
 
 public class AddressPage {
-
     @FindBy(xpath = ProjectConstants.NEW_WINDOW_FOR_ADDRESS_DEATILS)
     private WebElement newWindowForAddressDetails;
-
     @FindBy(xpath = ProjectConstants.TEXT_BOX_FOR_ADDRESS_NAME)
     private WebElement textBoxForAddressName;
-
     @FindBy(xpath = ProjectConstants.TEXT_BOX_FOR_ADDRESS_MOBILE_NO)
     private WebElement textBoxForAddressMobileNo;
-
     @FindBy(xpath = ProjectConstants.TEXT_BOX_FOR_ADDRESS_PIN_CODE)
     private WebElement textBoxForAddressPinCode;
-
     @FindBy(xpath = ProjectConstants.TEXT_BOX_FOR_ADDRESS_LINE1)
     private WebElement textBoxForAddressLine1;
-
     @FindBy(xpath = ProjectConstants.TEXT_BOX_FOR_ADDRESS_LINE2)
     private WebElement textBoxForAddressLine2;
-
     @FindBy(xpath = ProjectConstants.NAVIGATE_TO_YOUR_ACCOUNT)
     private WebElement navigateToYourAccount;
-
     @FindBy(xpath = ProjectConstants.NAVIGATE_TO_YOUR_ADDRESS)
     private WebElement navigateToYourAddress;
-
     @FindBy(xpath = ProjectConstants.ADD_ADDRESS)
     private WebElement addAddress;
-
     @FindBy(xpath = ProjectConstants.SUBMIT)
     private WebElement submit;
-
     @FindBy(xpath = ProjectConstants.RESPONSE_NAME)
     private WebElement responseName;
-
     @FindBy(xpath = ProjectConstants.RESPONSE_HOUSE_NO)
     private WebElement responseHouseNo;
-
     @FindBy(xpath = ProjectConstants.RESPONSE_STREET_NO)
     private WebElement responseStreetNo;
-
     @FindBy(xpath = ProjectConstants.RESPONSE_PIN_CODE)
     private WebElement responsePinCode;
-
     @FindBy(xpath = ProjectConstants.RESPONSE_MOBILE_NO)
     private WebElement responseMobileNo;
 
     public WebDriver driver;
 
-    public AddressPage(WebDriver driver){
+    public AddressPage(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(this.driver, this);
     }
 
-    public void getPopupForNewAddressEntry(){
+    public void getPopupForNewAddressEntry() {
         navigateToYourAccount.click();
         navigateToYourAddress.click();
         addAddress.click();
     }
 
-    public void enterNewAddressDetails(){
+    public void enterNewAddressDetails() {
         textBoxForAddressName.sendKeys(ProjectConstants.NAME);
         textBoxForAddressMobileNo.sendKeys(ProjectConstants.MOBILE);
         textBoxForAddressPinCode.sendKeys(ProjectConstants.PINCODE);
@@ -77,7 +62,7 @@ public class AddressPage {
         submit.click();
     }
 
-    public void verifyAddressDetails(){
+    public void verifyAddressDetails() {
         Assert.assertEquals(responseName.getText(), ProjectConstants.NAME, ErrorMessageConstants.ADDRESS_NAME_FAILED_TO_MATCH);
         String outputMobileNo = responseMobileNo.getText();
         String extractedNumber = outputMobileNo.replaceAll("\\D", "");

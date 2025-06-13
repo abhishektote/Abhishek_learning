@@ -10,7 +10,7 @@ import util.ErrorMessageConstants;
 
 import java.util.NoSuchElementException;
 
-public class WithLogin extends BaseTest{
+public class WithLogin extends BaseTest {
 
     private LoginPage loginPage;
     private NavigationBar navigationBar;
@@ -41,18 +41,16 @@ public class WithLogin extends BaseTest{
         try {
             navigationBar.navigateToBooksThroughNavigationBar();
             booksPage.clickOnPrimeCheckBox();
-
             String deliveryDetails = booksPage.getDeliveryDateDeatilsForFirstDisplayedItem();
             System.out.println("Delivery Details: " + deliveryDetails);
             Assert.assertNotNull(deliveryDetails, ErrorMessageConstants.DELIVERY_DETAILS_FAILED);
-
         } catch (NoSuchElementException | WebDriverException e) {
             throw new RuntimeException(String.format(ErrorMessageConstants.EXCEPTION_MESSAGE, e.getMessage()));
         }
     }
 
     @Test(priority = 2)
-    public void deliveryStatusVerify(){
+    public void deliveryStatusVerify() {
         try {
             String deliveryStatus = booksPage.getDeliveryDateDeatilsForFirstDisplayedItem();
             System.out.println("Delivery Status: " + deliveryStatus);
@@ -63,7 +61,7 @@ public class WithLogin extends BaseTest{
     }
 
     @Test(priority = 3)
-    public void navigateAndSelectLastYearOrder(){
+    public void navigateAndSelectLastYearOrder() {
         try {
             navigationBar.navigateToOrdersThroughNavigationBAr();
             orderPage.selectPastYearThroughDropDown();
@@ -74,11 +72,10 @@ public class WithLogin extends BaseTest{
     }
 
     @Test(priority = 4)
-    public void addNewPaymentMethodForSelectedProduct(){
+    public void addNewPaymentMethodForSelectedProduct() {
         try {
             orderPage.selectFirstOrderFromList();
             commonActions.performBuyNowAction();
-
             paymentPage.addNewPaymentMethodWithNewCardDetails(driver);
             Assert.assertTrue(paymentPage.verifyNewPaymentOption());
         } catch (Exception e) {
@@ -87,7 +84,7 @@ public class WithLogin extends BaseTest{
     }
 
     @Test(priority = 5)
-    public void addNewAddressFroSelectedProduct(){
+    public void addNewAddressFroSelectedProduct() {
         try {
             homePage.returnToHomePage();
             addressPage.getPopupForNewAddressEntry();

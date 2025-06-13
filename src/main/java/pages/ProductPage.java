@@ -10,22 +10,16 @@ import util.ProjectConstants;
 import java.util.NoSuchElementException;
 
 public class ProductPage {
-
     @FindBy(css = ProjectConstants.TODAYS_DEAL)
     private WebElement todaysDeal;
-
     @FindBy(xpath = ProjectConstants.THIRD_DEAL_FROM_TODAYS_DEAL)
     private WebElement thirdDealFromToadysDeal;
-
     @FindBy(xpath = ProjectConstants.SEARCH_TEXT_BOX)
     private WebElement searchTextBox;
-
     @FindBy(xpath = ProjectConstants.SEARCH_BUTTON)
     private WebElement searchButton;
-
     @FindBy(xpath = ProjectConstants.LAST_ELEMENT_FROM_SEARCH_RESULT)
     private WebElement lastElementFromSearchResult;
-
     @FindBy(xpath = ProjectConstants.LIST_OF_ALL_MOBILE_SEARCH)
     private WebElement listOfAllMobileSearch;
 
