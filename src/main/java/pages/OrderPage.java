@@ -9,13 +9,10 @@ import util.ProjectConstants;
 public class OrderPage {
     @FindBy(xpath = ProjectConstants.DATE_DROP_DOWN_ORDER_PAGE)
     private WebElement dateDropDownOrderPage;
-
     @FindBy(xpath = ProjectConstants.VALUE_FOR_YEAR_SELECTION)
     private WebElement valueForYearSelection;
-
     @FindBy(xpath = ProjectConstants.SELECT_FIRST_ORDER_FROM_LIST)
     private WebElement selectFirstOrderFromList;
-
 
     public WebDriver driver;
 

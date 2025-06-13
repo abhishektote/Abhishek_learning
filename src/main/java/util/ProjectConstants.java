@@ -1,9 +1,7 @@
 package util;
 
 public class ProjectConstants {
-
     public static final String MINIMUM_CART_VALUE = "1";
-    public static final Long EXPLICIT_WAIT_TIMEOUT = 2L;
     public static final String NEW_WINDOW_FOR_ADDRESS_DEATILS = "add-new-address-desktop-sasp-tango-link";
     public static final String TEXT_BOX_FOR_ADDRESS_NAME = "//input[@id='address-ui-widgets-enterAddressFullName']";
     public static final String TEXT_BOX_FOR_ADDRESS_MOBILE_NO = "//input[@id='address-ui-widgets-enterAddressPhoneNumber']";
@@ -56,6 +54,4 @@ public class ProjectConstants {
     public static final String HOUSE_NO = "A2/23";
     public static final String STREET_NO = "Ganesh nagar, Pimple New Sangvi";
     public static final String UPI_ID = "";
-
-
 }

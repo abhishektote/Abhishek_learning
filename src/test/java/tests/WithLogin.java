@@ -11,7 +11,6 @@ import util.ErrorMessageConstants;
 import java.util.NoSuchElementException;
 
 public class WithLogin extends BaseTest {
-
     private LoginPage loginPage;
     private NavigationBar navigationBar;
     private BooksPage booksPage;
