@@ -31,9 +31,7 @@ public class WithLogin extends BaseTest {
         addressPage = new AddressPage(driver);
         paymentPage = new PaymentPage(driver);
         homePage = new HomePage(driver);
-
         loginPage.PerformLoginAction();
-
     }
 
     @Test(priority = 1)
