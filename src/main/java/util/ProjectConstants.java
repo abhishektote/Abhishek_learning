@@ -1,0 +1,57 @@
+package util;
+
+public class ProjectConstants {
+    public static final String MINIMUM_CART_VALUE = "1";
+    public static final String NEW_WINDOW_FOR_ADDRESS_DEATILS = "add-new-address-desktop-sasp-tango-link";
+    public static final String TEXT_BOX_FOR_ADDRESS_NAME = "//input[@id='address-ui-widgets-enterAddressFullName']";
+    public static final String TEXT_BOX_FOR_ADDRESS_MOBILE_NO = "//input[@id='address-ui-widgets-enterAddressPhoneNumber']";
+    public static final String TEXT_BOX_FOR_ADDRESS_PIN_CODE = "//input[@id='address-ui-widgets-enterAddressPostalCode']";
+    public static final String TEXT_BOX_FOR_ADDRESS_LINE1 = "//input[@id='address-ui-widgets-enterAddressLine1']";
+    public static final String TEXT_BOX_FOR_ADDRESS_LINE2 = "//input[@id='address-ui-widgets-enterAddressLine2']";
+    public static final String PRIME_CHECKBOX_ON_BOOK_PAGE = "//i[@class='a-icon a-icon-prime a-icon-medium apb-browse-refinements-icon']";
+    public static final String PRIME_DELIVERY_STATUS = "(//div[@data-index='2']//div[@class='a-row'])[6]";
+    public static final String BUY_NOW_BUTTON = "//input[@id='buy-now-button']";
+    public static final String ADD_TO_CART = "(//input[@id='add-to-cart-button'])[2]";
+    public static final String GO_TO_CART = "//*[@href='/cart?ref_=sw_gtc']";
+    public static final String GET_CART_QUANTITY = "//span[@data-a-selector='value']";
+    public static final String LOGIN_WINDOW = "//span[@id='nav-link-accountList-nav-line-1']";
+    public static final String NAME_TEXT_BOX_ON_LOGIN_WINDOW = "//input[@id='ap_email_login']";
+    public static final String SUBMIT_FOR_EMAIL_OR_MOBILE_TEXT = "//input[@type='submit']";
+    public static final String PASSWORD_TEXT_BOX_ON_LOGIN_WINDOW = "//input[@type='password']";
+    public static final String SIGNIN_BUTTON = "//input[@id='signInSubmit']";
+    public static final String MOBILE_ON_NAVIGATION_BAR = "//a[@data-csa-c-content-id='nav_cs_mobiles']";
+    public static final String BOOK_ON_NAVIGATION_BAR = "//a[@data-csa-c-content-id='nav_cs_books']";
+    public static final String ORDER_ON_NAVIGATION_BAR = "//a[@id='nav-orders']";
+    public static final String DATE_DROP_DOWN_ORDER_PAGE = "//span[@role='button']";
+    public static final String VALUE_FOR_YEAR_SELECTION = "//a[@id='time-filter_3']";
+    public static final String SELECT_FIRST_ORDER_FROM_LIST = "(//li[@class='order-card__list']//a[@aria-hidden='false'])[1]";
+    public static final String RADIO_BUTTON_FOR_ADD_NEW_UPI = "//div[@aria-label='Other UPI Apps']";
+    public static final String INPUT_BOX_FOR_UPI_NO = "//input[@placeholder='Enter UPI ID']";
+    public static final String VERIFY_UPI = "//input[@name='ppw-widgetEvent:ValidateUpiIdEvent']";
+    public static final String VALIDATE_UPI = "//div[@class='a-box a-alert-inline a-alert-inline-success']" ;
+    public static final String TODAYS_DEAL = ".nav-a[href*='deals?'";
+    public static final String THIRD_DEAL_FROM_TODAYS_DEAL = "//div[@class='GridItem-module__container_PW2gdkwTj1GQzdwJjejN'][@data-test-index='2']";
+    public static final String SEARCH_TEXT_BOX = "//input[@id='twotabsearchtextbox']";
+    public static final String SEARCH_BUTTON = "//input[@id='nav-search-submit-button']";
+    public static final String LAST_ELEMENT_FROM_SEARCH_RESULT = "//div[@data-index='27']";
+    public static final String LIST_OF_ALL_MOBILE_SEARCH = "//div[@role='listitem']";
+    public static final String NAVIGATE_TO_YOUR_ACCOUNT = "//a[@data-nav-ref='nav_youraccount_btn']";
+    public static final String NAVIGATE_TO_YOUR_ADDRESS = "//div[@data-card-identifier='AddressesAnd1Click']";
+    public static final String ADD_ADDRESS = "//div[@id='ya-myab-plus-address-icon']";
+    public static final String SUBMIT = "//input[@aria-labelledby='address-ui-widgets-form-submit-button-announce']";
+    public static final String RESPONSE_NAME = "//div[@id='ya-myab-display-address-block-1']//h5[@id='address-ui-widgets-FullName']";
+    public static final String RESPONSE_HOUSE_NO = "//div[@id='ya-myab-display-address-block-1']//span[@id='address-ui-widgets-AddressLineOne']";
+    public static final String RESPONSE_STREET_NO = "//div[@id='ya-myab-display-address-block-1']//span[@id='address-ui-widgets-AddressLineTwo']";
+    public static final String RESPONSE_PIN_CODE = "//div[@id='ya-myab-display-address-block-1']//span[@id='address-ui-widgets-CityStatePostalCode']";
+    public static final String RESPONSE_MOBILE_NO = "//div[@id='ya-myab-display-address-block-1']//span[@id='address-ui-widgets-PhoneNumber']";
+    public static final String AMAZON_HOME = "//a[@id='nav-logo-sprites']";
+
+    public static final String USERNAME = "";
+    public static final String PASSWORD = "";
+    public static final String NAME = "abhishek tote";
+    public static final String PINCODE = "411027";
+    public static final String MOBILE = "7057677153";
+    public static final String HOUSE_NO = "A2/23";
+    public static final String STREET_NO = "Ganesh nagar, Pimple New Sangvi";
+    public static final String UPI_ID = "";
+}
