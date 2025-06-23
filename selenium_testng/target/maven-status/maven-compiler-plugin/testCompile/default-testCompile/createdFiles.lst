@@ -1,0 +1,3 @@
+tests/testComponents/BaseTest.class
+tests/WithoutLogin.class
+tests/WithLogin.class
