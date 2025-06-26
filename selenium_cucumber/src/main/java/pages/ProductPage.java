@@ -12,25 +12,25 @@ import java.util.NoSuchElementException;
 import static base.WebDriverFactory.driver;
 
 public class ProductPage {
-    @FindBy(css = ProjectConstants.TODAYS_DEAL)
+    @FindBy(css = ".nav-a[href*='deals?'")
     private WebElement todaysDeal;
 
-    @FindBy(xpath = ProjectConstants.THIRD_DEAL_FROM_TODAYS_DEAL)
+    @FindBy(xpath = "//div[@class='GridItem-module__container_PW2gdkwTj1GQzdwJjejN'][@data-test-index='2']")
     private WebElement thirdDealFromToadysDeal;
 
-    @FindBy(xpath = ProjectConstants.SEARCH_TEXT_BOX)
+    @FindBy(xpath = "//input[@id='twotabsearchtextbox']")
     private WebElement searchTextBox;
 
-    @FindBy(xpath = ProjectConstants.SEARCH_BUTTON)
+    @FindBy(xpath = "//input[@id='nav-search-submit-button']")
     private WebElement searchButton;
 
-    @FindBy(xpath = ProjectConstants.LAST_ELEMENT_FROM_SEARCH_RESULT)
+    @FindBy(xpath = "//div[@data-index='27']")
     private WebElement lastElementFromSearchResult;
 
-    @FindBy(xpath = ProjectConstants.LIST_OF_ALL_MOBILE_SEARCH)
+    @FindBy(xpath = "//div[@role='listitem']")
     private WebElement listOfAllMobileSearch;
 
-    @FindBy(xpath = ProjectConstants.PRODUCT_TITLE)
+    @FindBy(xpath = "//span[@id='productTitle']")
     WebElement productTitle;
 
     public ProductPage() {

@@ -9,16 +9,16 @@ import util.ProjectConstants;
 import static base.WebDriverFactory.driver;
 
 public class CommonActions {
-    @FindBy(xpath = ProjectConstants.BUY_NOW_BUTTON)
+    @FindBy(xpath = "//input[@id='buy-now-button']")
     private WebElement buyNowButton;
 
-    @FindBy(xpath = ProjectConstants.ADD_TO_CART)
+    @FindBy(xpath = "(//input[@id='add-to-cart-button'])[2]")
     private WebElement addToCart;
 
-    @FindBy(xpath = ProjectConstants.GO_TO_CART)
+    @FindBy(xpath = "//*[@href='/cart?ref_=sw_gtc']")
     private WebElement goToCart;
 
-    @FindBy(xpath = ProjectConstants.GET_CART_QUANTITY)
+    @FindBy(xpath = "//span[@data-a-selector='value']")
     private WebElement getCartQuantity;
 
     public CommonActions() {

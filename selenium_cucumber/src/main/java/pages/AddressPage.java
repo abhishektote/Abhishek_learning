@@ -11,49 +11,49 @@ import util.ProjectConstants;
 import static base.WebDriverFactory.driver;
 
 public class AddressPage {
-    @FindBy(xpath = ProjectConstants.NEW_WINDOW_FOR_ADDRESS_DEATILS)
+    @FindBy(id = "add-new-address-desktop-sasp-tango-link")
     private WebElement newWindowForAddressDetails;
 
-    @FindBy(xpath = ProjectConstants.TEXT_BOX_FOR_ADDRESS_NAME)
+    @FindBy(xpath = "//input[@id='address-ui-widgets-enterAddressFullName']")
     private WebElement textBoxForAddressName;
 
-    @FindBy(xpath = ProjectConstants.TEXT_BOX_FOR_ADDRESS_MOBILE_NO)
+    @FindBy(xpath = "//input[@id='address-ui-widgets-enterAddressPhoneNumber']")
     private WebElement textBoxForAddressMobileNo;
 
-    @FindBy(xpath = ProjectConstants.TEXT_BOX_FOR_ADDRESS_PIN_CODE)
+    @FindBy(xpath = "//input[@id='address-ui-widgets-enterAddressPostalCode']")
     private WebElement textBoxForAddressPinCode;
 
-    @FindBy(xpath = ProjectConstants.TEXT_BOX_FOR_ADDRESS_LINE1)
+    @FindBy(xpath = "//input[@id='address-ui-widgets-enterAddressLine1']")
     private WebElement textBoxForAddressLine1;
 
-    @FindBy(xpath = ProjectConstants.TEXT_BOX_FOR_ADDRESS_LINE2)
+    @FindBy(xpath = "//input[@id='address-ui-widgets-enterAddressLine2']")
     private WebElement textBoxForAddressLine2;
 
-    @FindBy(xpath = ProjectConstants.NAVIGATE_TO_YOUR_ACCOUNT)
+    @FindBy(xpath = "//a[@data-nav-ref='nav_youraccount_btn']")
     private WebElement navigateToYourAccount;
 
-    @FindBy(xpath = ProjectConstants.NAVIGATE_TO_YOUR_ADDRESS)
+    @FindBy(xpath = "//div[@data-card-identifier='AddressesAnd1Click']")
     private WebElement navigateToYourAddress;
 
-    @FindBy(xpath = ProjectConstants.ADD_ADDRESS)
+    @FindBy(xpath = "//div[@id='ya-myab-plus-address-icon']")
     private WebElement addAddress;
 
-    @FindBy(xpath = ProjectConstants.SUBMIT)
+    @FindBy(xpath = "//input[@aria-labelledby='address-ui-widgets-form-submit-button-announce']")
     private WebElement submit;
 
-    @FindBy(xpath = ProjectConstants.RESPONSE_NAME)
+    @FindBy(xpath = "//div[@id='ya-myab-display-address-block-1']//h5[@id='address-ui-widgets-FullName']")
     private WebElement responseName;
 
-    @FindBy(xpath = ProjectConstants.RESPONSE_HOUSE_NO)
+    @FindBy(xpath = "//div[@id='ya-myab-display-address-block-1']//span[@id='address-ui-widgets-AddressLineOne']")
     private WebElement responseHouseNo;
 
-    @FindBy(xpath = ProjectConstants.RESPONSE_STREET_NO)
+    @FindBy(xpath = "//div[@id='ya-myab-display-address-block-1']//span[@id='address-ui-widgets-AddressLineTwo']")
     private WebElement responseStreetNo;
 
-    @FindBy(xpath = ProjectConstants.RESPONSE_PIN_CODE)
+    @FindBy(xpath = "//div[@id='ya-myab-display-address-block-1']//span[@id='address-ui-widgets-CityStatePostalCode']")
     private WebElement responsePinCode;
 
-    @FindBy(xpath = ProjectConstants.RESPONSE_MOBILE_NO)
+    @FindBy(xpath = "//div[@id='ya-myab-display-address-block-1']//span[@id='address-ui-widgets-PhoneNumber']")
     private WebElement responseMobileNo;
 
     public AddressPage(){

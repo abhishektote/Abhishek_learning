@@ -9,13 +9,13 @@ import util.ProjectConstants;
 import static base.WebDriverFactory.driver;
 
 public class NavigationBar {
-    @FindBy(xpath = ProjectConstants.MOBILE_ON_NAVIGATION_BAR)
+    @FindBy(xpath = "//a[@data-csa-c-content-id='nav_cs_mobiles']")
     private WebElement mobileOnNavigationBar;
 
-    @FindBy(xpath = ProjectConstants.BOOK_ON_NAVIGATION_BAR)
+    @FindBy(xpath = "//a[@data-csa-c-content-id='nav_cs_books']")
     private WebElement bookOnNavigationBar;
 
-    @FindBy(xpath = ProjectConstants.ORDER_ON_NAVIGATION_BAR)
+    @FindBy(xpath = "//a[@id='nav-orders']")
     private WebElement orderOnNavigationBar;
 
     public NavigationBar() {

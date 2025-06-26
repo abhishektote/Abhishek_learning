@@ -9,16 +9,16 @@ import util.ProjectConstants;
 import static base.WebDriverFactory.driver;
 
 public class PaymentPage {
-    @FindBy(xpath = ProjectConstants.RADIO_BUTTON_FOR_ADD_NEW_UPI)
+    @FindBy(xpath = "//div[@aria-label='Other UPI Apps']")
     private WebElement radioButtonForAddNewUPI;
 
-    @FindBy(xpath = ProjectConstants.INPUT_BOX_FOR_UPI_NO)
+    @FindBy(xpath = "//input[@placeholder='Enter UPI ID']")
     private WebElement inputBoxForUPINo;
 
-    @FindBy(xpath = ProjectConstants.VERIFY_UPI)
+    @FindBy(xpath = "//input[@name='ppw-widgetEvent:ValidateUpiIdEvent']")
     private WebElement verifyUpi;
 
-    @FindBy(xpath = ProjectConstants.VALIDATE_UPI)
+    @FindBy(xpath = "//div[@class='a-box a-alert-inline a-alert-inline-success']")
     private WebElement newPaymentOptionVerification;
 
     public PaymentPage() {

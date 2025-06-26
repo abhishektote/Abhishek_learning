@@ -8,7 +8,7 @@ import util.ProjectConstants;
 import static base.WebDriverFactory.driver;
 
 public class HomePage {
-    @FindBy(xpath = ProjectConstants.AMAZON_HOME)
+    @FindBy(xpath = "//a[@id='nav-logo-sprites']")
     private WebElement homePage;
 
     public HomePage() {

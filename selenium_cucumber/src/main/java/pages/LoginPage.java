@@ -8,22 +8,22 @@ import util.ProjectConstants;
 import static base.WebDriverFactory.driver;
 
 public class LoginPage {
-    @FindBy(xpath = ProjectConstants.LOGIN_WINDOW)
+    @FindBy(xpath = "//span[@id='nav-link-accountList-nav-line-1']")
     public WebElement loginWindow;
 
-    @FindBy(xpath = ProjectConstants.NAME_TEXT_BOX_ON_LOGIN_WINDOW)
+    @FindBy(xpath = "//input[@id='ap_email_login']")
     public WebElement nameTextBoxOnLoginWindow;
 
-    @FindBy(xpath = ProjectConstants.SUBMIT_FOR_EMAIL_OR_MOBILE_TEXT)
+    @FindBy(xpath = "//input[@type='submit']")
     public WebElement submitForEmailOrMobileText;
 
-    @FindBy(xpath = ProjectConstants.PASSWORD_TEXT_BOX_ON_LOGIN_WINDOW)
+    @FindBy(xpath = "//input[@type='password']")
     public WebElement passwordTextBoxOnLoginWindow;
 
-    @FindBy(xpath = ProjectConstants.SIGNIN_BUTTON)
+    @FindBy(xpath = "//input[@id='signInSubmit']")
     public WebElement siginButton;
 
-    @FindBy(xpath = ProjectConstants.USERNAME_AFTER_LOGIN)
+    @FindBy(xpath = "//span[@id='nav-link-accountList-nav-line-1']")
     public WebElement userNameAfterLogin;
 
     public LoginPage() {

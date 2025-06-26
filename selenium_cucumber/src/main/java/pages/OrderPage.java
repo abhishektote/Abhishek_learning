@@ -9,16 +9,16 @@ import util.ProjectConstants;
 import static base.WebDriverFactory.driver;
 
 public class OrderPage {
-    @FindBy(xpath = ProjectConstants.DATE_DROP_DOWN_ORDER_PAGE)
+    @FindBy(xpath = "//span[@role='button']")
     private WebElement dateDropDownOrderPage;
 
-    @FindBy(xpath = ProjectConstants.VALUE_FOR_YEAR_SELECTION)
+    @FindBy(xpath = "//a[@id='time-filter_3']")
     private WebElement valueForYearSelection;
 
-    @FindBy(xpath = ProjectConstants.SELECT_FIRST_ORDER_FROM_LIST)
+    @FindBy(xpath = "(//li[@class='order-card__list']//a[@aria-hidden='false'])[1]")
     private WebElement selectFirstOrderFromList;
 
-    @FindBy(xpath = ProjectConstants.DROP_DOWN_VALUE_YEAR)
+    @FindBy(xpath = "//span[@class='a-dropdown-prompt']")
     private WebElement dropDownValueYear;
 
     public OrderPage() {

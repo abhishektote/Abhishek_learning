@@ -1,23 +1,32 @@
 package stepDefinition;
 
-import base.BaseTest;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.testng.Assert;
+import pages.*;
 import util.ErrorMessageConstants;
 import util.ProjectConstants;
 
-public class WithLoginSteps extends BaseTest {
+public class WithLoginSteps {
+    private LoginPage loginPage;
+    private NavigationBar navigationBar;
+    private BooksPage booksPage;
+    private OrderPage orderPage;
+    private CommonActions commonActions;
+    private AddressPage addressPage;
+    private PaymentPage paymentPage;
+    private HomePage homePage;
+
     public WithLoginSteps(){
-        createLoginPageInstance();
-        createNavigationPageInstance();
-        createBooksPageInstance();
-        createOrderPageInstance();
-        createCommonActionsPageInstance();
-        createAddressPageInstance();
-        createPaymentPageInstance();
-        createHomePageInstance();
+        loginPage = new LoginPage();
+        navigationBar = new NavigationBar();
+        booksPage = new BooksPage();
+        orderPage = new OrderPage();
+        commonActions = new CommonActions();
+        addressPage = new AddressPage();
+        paymentPage = new PaymentPage();
+        homePage = new HomePage();
     }
 
     @When("the user logs in using {string} and {string}")

@@ -1,21 +1,29 @@
 package stepDefinition;
 
-import base.BaseTest;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
+import pages.CommonActions;
+import pages.HomePage;
+import pages.NavigationBar;
+import pages.ProductPage;
 import util.ErrorMessageConstants;
 import util.ProjectConstants;
 
 import static base.WebDriverFactory.driver;
 
-public class WithoutLoginSteps extends BaseTest {
+public class WithoutLoginSteps {
+    private HomePage homePage;
+    private ProductPage productPage;
+    private NavigationBar navigationBar;
+    private CommonActions commonActions;
+
     public WithoutLoginSteps(){
-        createProductPageInstance();
-        createCommonActionsPageInstance();
-        createNavigationPageInstance();
-        createHomePageInstance();
+        homePage = new HomePage();
+        productPage = new ProductPage();
+        navigationBar = new NavigationBar();
+        commonActions = new CommonActions();
     }
 
     @When("the user clicks on Today's Deal")

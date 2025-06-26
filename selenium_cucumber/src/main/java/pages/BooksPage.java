@@ -9,10 +9,10 @@ import util.ProjectConstants;
 import static base.WebDriverFactory.driver;
 
 public class BooksPage {
-    @FindBy(xpath = ProjectConstants.PRIME_CHECKBOX_ON_BOOK_PAGE)
+    @FindBy(xpath = "//i[@class='a-icon a-icon-prime a-icon-medium apb-browse-refinements-icon']")
     private WebElement primeCheckBoxOnBookPage;
 
-    @FindBy(xpath = ProjectConstants.PRIME_DELIVERY_STATUS)
+    @FindBy(xpath = "//div[@data-index='2']//div[@data-cy='delivery-recipe']")
     private WebElement primeDeliveryStatus;
 
     public BooksPage() {
