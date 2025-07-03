@@ -59,6 +59,16 @@ public class ProductPage {
         searchButton.click();
     }
 
+    public WebElement scrollAndGetDetailsOfLastItem(WebDriver driver) {
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("window.scrollTo(0, document.body.scrollHeight-3000);");
+        return lastElementFromSearchResult;
+    }
+
+    public String getSelectedProductName(){
+        return productTitle.getText();
+    }
+
     public void searchTextLap(){
         searchTextBox.sendKeys("Lap");
     }
@@ -77,15 +87,5 @@ public class ProductPage {
                 return true;
         }
         return false;
-    }
-
-    public WebElement scrollAndGetDetailsOfLastItem(WebDriver driver) {
-        JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("window.scrollTo(0, document.body.scrollHeight-3000);");
-        return lastElementFromSearchResult;
-    }
-
-    public String getSelectedProductName(){
-        return productTitle.getText();
     }
 }
