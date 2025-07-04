@@ -1,0 +1,399 @@
+{
+	"info": {
+		"_postman_id": "fa958106-3123-4ecf-83eb-e798a14311d6",
+		"name": "Api Testing Demo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "45120279"
+	},
+	"item": [
+		{
+			"name": "New Request",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Validate job is leader\", function () {",
+							"    pm.response.to.have.jsonBody('job', 'leader');",
+							"})",
+							"",
+							"const Ajv = require('ajv');",
+							"const ajv = new Ajv({ allError: true });",
+							"",
+							"const schema = {",
+							"    \"type\": \"object\",",
+							"    require: [\"name\", \"job\", \"id\", \"createdAt\"],",
+							"    properties: {",
+							"        \"name\": { \"type\": \"string\" },",
+							"        \"job\": { \"type\": \"string\" },",
+							"        \"id\": { \"type\": \"string\" },",
+							"        \"createdAt\": { \"type\": \"string\" }",
+							"    }",
+							"}",
+							"",
+							"const validate = ajv.compile(schema);",
+							"const valid = validate(pm.response.json());",
+							"",
+							"pm.test(\"Validate response body\", function () {",
+							"    pm.expect(valid).to.be.true;",
+							"})"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "{{x-api-key}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"morpheus\",\n    \"job\": \"leader\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://reqres.in/api/users",
+					"protocol": "https",
+					"host": [
+						"reqres",
+						"in"
+					],
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// const Ajv = require('ajv');",
+							"// const ajv = new Ajv({ allError: true });",
+							"",
+							"// const schema = {",
+							"//     \"type\": \"object\",",
+							"//     \"required\": [\"data\", \"support\"],",
+							"//     \"properties\": {",
+							"//         \"data\": {",
+							"//             \"type\": \"object\",",
+							"//             \"properties\": {",
+							"//                 \"id\": {\"type\": \"number\"},",
+							"//                 \"email\": {\"type\": \"string\"},",
+							"//                 \"first_name\": {\"type\": \"string\"},",
+							"//                 \"last_name\": {\"type\": \"string\"},",
+							"//                 \"avatar\": {\"type\": \"string\"}",
+							"//                 },",
+							"//                 \"required\": [\"id\", \"email\", \"first_name\", \"last_name\", \"avatar\"]",
+							"//                 },",
+							"//                 \"support\": {",
+							"//                     \"type\": \"object\",",
+							"//                     \"properties\": {",
+							"//                         \"url\": {\"type\": \"string\"},",
+							"//                         \"text\": {\"type\": \"string\"}",
+							"//                         },",
+							"//                         \"required\": [\"url\", \"text\"]",
+							"//                 }",
+							"//             }",
+							"//         }",
+							"//     }",
+							"// }",
+							"",
+							"// const validate = ajv.compile(schema);",
+							"// const valid = validate(pm.response.json());",
+							"",
+							"// pm.test(\"Response body is valid\", function () {",
+							"//     pm.expect(valid).to.be.true;",
+							"// })",
+							"",
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"})",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "{{x-api-key}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://reqres.in/api/users/2",
+					"protocol": "https",
+					"host": [
+						"reqres",
+						"in"
+					],
+					"path": [
+						"api",
+						"users",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"})"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "{{x-api-key}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://reqres.in/api/users?page=2",
+					"protocol": "https",
+					"host": [
+						"reqres",
+						"in"
+					],
+					"path": [
+						"api",
+						"users"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"const Ajv = require('ajv');",
+							"const ajv = new Ajv({ allError: true });",
+							"",
+							"const schema = {",
+							"    type: 'object',",
+							"    properties: {",
+							"        name: { type: 'string' },",
+							"        job: { type: 'string' },",
+							"        updatedAt: { type: 'string', format: 'date-time' }",
+							"    },",
+							"    required: ['name', 'job', 'updatedAt']",
+							"};",
+							"",
+							"const validate = ajv.compile(schema);",
+							"const valid = validate(pm.response.json());",
+							"",
+							"pm.test(\"Response body is valid\", function () {",
+							"    pm.expect(valid).to.be.true;",
+							"})",
+							"",
+							"pm.test(\"Validate name is morpheus\", function () {",
+							"    pm.response.to.have.jsonBody('name', 'morpheus');",
+							"})",
+							"",
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"})"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "{{x-api-key}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"morpheus\",\n    \"job\": \"zion resident\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://reqres.in/api/users/2",
+					"protocol": "https",
+					"host": [
+						"reqres",
+						"in"
+					],
+					"path": [
+						"api",
+						"users",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"const Ajv = require('ajv');",
+							"const ajv = new Ajv({ allError: true });",
+							"",
+							"const schema = {",
+							"    type: 'object',",
+							"    properties: {",
+							"        name: { type: 'string' },",
+							"        job: { type: 'string' },",
+							"        updatedAt: { type: 'string', format: 'date-time' }",
+							"    },",
+							"    required: ['name', 'job', 'updatedAt']",
+							"};",
+							"",
+							"const validate = ajv.compile(schema);",
+							"const valid = validate(pm.response.json());",
+							"",
+							"pm.test(\"Response body is valid\", function () {",
+							"    pm.expect(valid).to.be.true;",
+							"})",
+							"",
+							"pm.test(\"Validate job is resident\", function () {",
+							"    pm.response.to.have.jsonBody('job', 'resident');",
+							"})",
+							"",
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"})"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "{{x-api-key}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"morpheu\",\n    \"job\": \"resident\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://reqres.in/api/users/2",
+					"protocol": "https",
+					"host": [
+						"reqres",
+						"in"
+					],
+					"path": [
+						"api",
+						"users",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 204\", function () {",
+							"    pm.response.to.have.status(204);",
+							"})",
+							"",
+							"pm.test(\"Response body to be empty\", function () {",
+							"    pm.expect(pm.response.text()).to.eql(\"\");",
+							"})"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "{{x-api-key}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://reqres.in/api/users/2",
+					"protocol": "https",
+					"host": [
+						"reqres",
+						"in"
+					],
+					"path": [
+						"api",
+						"users",
+						"2"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

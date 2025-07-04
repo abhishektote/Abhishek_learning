@@ -1,4 +1,0 @@
-stepDefinition/Hooks.class
-runner/TestNGRunner.class
-stepDefinition/WithLoginSteps.class
-stepDefinition/WithoutLoginSteps.class
